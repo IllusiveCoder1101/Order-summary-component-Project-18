@@ -1,0 +1,148 @@
+*{
+  --color-primary-: hsl(225, 100%, 94%);
+  --color-secondary-:hsl(245, 75%, 52%);
+  --color-tertiary-:hsl(225, 100%, 98%);
+  --color-quad-: hsl(224, 23%, 55%);
+  --color-accent-:hsl(223, 47%, 23%);
+}
+@font-face {
+  font-family: "Red-mid";
+  src: local("fonts"), url("./fonts/RedHatDisplay-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Red-bold";
+  src: local("fonts"), url("./fonts/RedHatDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Red-ex";
+  src: local("fonts"), url("./fonts/RedHatDisplay-ExtraBold.ttf") format("truetype");
+}
+html{
+  font-size:62.5%;
+  background-color:var(--color-primary-);
+  background-image:url("./assets/pattern-background-mobile.svg");
+  background-repeat:no-repeat;
+}
+.box{
+  width:100%;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  width:40rem;
+  border-radius:2rem;
+  overflow:hidden;
+  background-color:white;
+}
+.text{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:center;
+  padding:2rem;
+}
+.head{
+  font-family:Red-ex;
+  color:var(--color-accent-);
+  font-size:3rem;
+}
+.about{
+  margin-top:-1rem;
+  font-family:Red-mid;
+  color:var(--color-quad-);
+  font-size:1.9rem;
+}
+.product{
+  display:flex;
+  padding:0.4rem;
+  border-radius: 1rem;
+  width:87%;
+  justify-content: space-evenly;
+}
+.plan{
+  margin-left:-3rem;
+  margin-top:0.5rem;
+  line-height: 0.5rem;
+}
+.annual{
+  font-family:Red-mid;
+  font-size:1.3rem;
+}
+.price{
+  font-family:Red-mid;
+  color:var(--color-quad-);
+  font-size:1.4rem;
+}
+.change{
+  border:none;
+  background:none;
+  transition:all linear 1s;
+}
+.change:hover{
+  color:var(--color-quad-);
+}
+.payment{
+  width:30rem;
+  margin-top:2rem;
+  background:var(--color-secondary-);
+  padding:1rem;
+  border:none;
+  border-radius: 1rem;
+  color:white;
+  transition:all linear 1s;
+}
+.payment:hover{
+  background-color:var(--color-quad-);
+  box-shadow:1rem 2rem 1rem var(--color-primary-);
+}
+.cancel{
+  border:none;
+  background:none;
+  margin-top:1rem;
+  transition:all linear 1s;
+}
+.cancel:hover{
+  color:var(--color-quad-);
+}
+.header{
+  background-image: url("./assets/illustration-hero.svg");
+  background-size: 40rem;
+  padding:10rem;
+}
+@media screen and (min-width:400px) {
+  html{
+    background-color:var(--color-primary-);
+    background-image:url("./assets/pattern-background-desktop.svg");
+
+  }
+  
+}
+@media screen and (min-width:1024px) {
+  html{
+    font-size:100%;
+  }
+  .container{
+    height:39rem;
+    width:30rem;
+  }
+  .header{
+    background-size:35rem;
+    padding:7rem;
+  }
+  .head{
+    font-size:2rem;
+  }
+  .about{
+    font-size:1.2rem;
+  }
+  .plan{
+    margin-left:-2rem;
+    margin-top:-0.5rem;
+  }
+  .payment{
+    width:20rem;
+  }
+  
+}
